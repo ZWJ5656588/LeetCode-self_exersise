@@ -1,6 +1,7 @@
 # include <iostream>
 # include <vector>
 # include <algorithm>
+# include <functional>
 using namespace std;
 
 /*给你一个整数数组 nums ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
@@ -21,9 +22,9 @@ public:
 };
 
 // 这种写法利用了快排序 O(nlogn+n)->时间复杂度为O(nlogn) 不是很省
-// 直接找最大值 时间复杂度O(2n) 
 
-// 法二
+
+// 法二  // 直接找最大值 时间复杂度O(2n) 
 class Solution2 {
 public:
     int maxSubArray(vector<int>& nums) {
